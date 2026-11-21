@@ -37,15 +37,8 @@ public class Overlord : MonoBehaviour
 
     public enum WorldType
     {
-        Countryside = 0,
-        Mountain = 1,
-        Desert = 2,
-        Snow = 3,
-        Jungle = 4,
-        Titan = 5,
-        Mixed = 6, 
-        Space = 7,
-        Finale = 8
+        Elsinore = 0,
+        Finale = 1,
     }
     public static WorldType type;
     void Awake()
@@ -62,11 +55,6 @@ public class Overlord : MonoBehaviour
         saveCount = 0;
         SaveManager.Register(Save);
         wasNight = true;
-        
-        if(type==WorldType.Jungle)
-        {
-            RenderSettings.fogDensity*=2;
-        }
     }
 
     public static void Pause(bool freeze = true)

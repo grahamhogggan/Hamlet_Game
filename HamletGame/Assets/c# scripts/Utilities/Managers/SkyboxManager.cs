@@ -10,12 +10,7 @@ public class SkyboxManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(Overlord.type == Overlord.WorldType.Space)
-        {
-            RenderSettings.skybox = stars;
-            usualSun.SetActive(false);
-            newSun.SetActive(true);
-        }
+
     }
 
 }

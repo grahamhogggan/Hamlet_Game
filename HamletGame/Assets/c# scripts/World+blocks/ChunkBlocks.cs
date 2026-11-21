@@ -44,10 +44,16 @@ public class ChunkBlocks : MonoBehaviour
                     spawned.typeName = "dirt";
                     chunk.addBlock(b.GetComponent<Block>(), i, j, k);
                     int blockY = j + (int)((Spawner.instance.chunksY - chunk.GetLocation().y) * 5);
-                    if (Overlord.type == Overlord.WorldType.Countryside)
+                    
+                    // if (Overlord.type == Overlord.WorldType.Countryside)
+                    // {
+                    //     CountrysideWorldGen(spawned, blockY, h, perlin, cavePerlin);
+                    // }
+                    if(Overlord.type == Overlord.WorldType.Elsinore)
                     {
-                        CountrysideWorldGen(spawned, blockY, h, perlin, cavePerlin);
+                        ElsinoreWorldGen(spawned, blockY, h, perlin, cavePerlin);
                     }
+                    /*
                     else if (Overlord.type == Overlord.WorldType.Mountain)
                     {
                         MountainWorldGen(spawned, blockY, h, perlin, cavePerlin);
@@ -101,6 +107,7 @@ public class ChunkBlocks : MonoBehaviour
                         SpaceWorldGen(spawned, blockY, h, perlin, cavePerlin);
 
                     }
+                    */
                     else if (Overlord.type == Overlord.WorldType.Finale)
                     {
                         FinalWorldGen(spawned, blockY, h, perlin, cavePerlin);
@@ -120,7 +127,7 @@ public class ChunkBlocks : MonoBehaviour
             spawned.SetBlock("sand");
         }
     }
-    private void CountrysideWorldGen(Block spawned, int blockY, int h, float perlin, float cavePerlin)
+    private void ElsinoreWorldGen(Block spawned, int blockY, int h, float perlin, float cavePerlin)
     {
         if (blockY > h)
         {
@@ -179,343 +186,12 @@ public class ChunkBlocks : MonoBehaviour
 
         }
     }
-    private void SpaceWorldGen(Block spawned, int blockY, int h, float perlin, float cavePerlin)
-    {
-        float waterLevel = ChunkBlocks.waterLevel+1;
-        if (blockY > h||blockY-waterLevel<waterLevel-perlin)
-        {
-                spawned.gameObject.SetActive(false);
-        }
-        else
-        {
-            if (h <= waterLevel + 1 && blockY > h - 1)
-            {
-                spawned.SetBlock("stone");
-            }
-            else if (blockY >= snowPeak)
-            {
-                spawned.SetBlock("snow");
-            }
-            else if (blockY == h)
-            {
-                spawned.SetBlock("grass");
-
-            }
-        }
-        if (blockY >= h)
-        {
-            chunk.Expose();
-        }
-
-
-        if (perlin - blockY > 3)
-        {
-            int oreType = Random.Range(0, 1000);
-            if (oreType<100)
-            {
-                spawned.SetBlock("metal");
-            }
-            else if (oreType<110)
-            {
-                spawned.SetBlock("gold");
-            }
-            else
-            {
-                spawned.SetBlock("stone");
-            }
-
-            if (Mathf.Abs(blockY - ((perlin - ground) / caveShift) - caveLevel) < cavePerlin - caveThreshold)
-            {
-                spawned.gameObject.SetActive(false);
-            }
-
-        }
-    }
-
-    private void SnowWorldGen(Block spawned, int blockY, int h, float perlin, float cavePerlin)
-    {
-        float modifiedWaterLevel = waterLevel - 8;
-        if (blockY > h)
-        {
-            if (blockY < modifiedWaterLevel)
-            {
-                spawned.SetBlock("water4");
-            }
-            else if (blockY == modifiedWaterLevel)
-            {
-                spawned.SetBlock("ice");
-            }
-            else
-            {
-                spawned.gameObject.SetActive(false);
-            }
-
-        }
-        else
-        {
-            if (h <= modifiedWaterLevel + 1 && blockY > h - 2)
-            {
-                spawned.SetBlock("ice");
-            }
-            else if (blockY >= snowPeak)
-            {
-                spawned.SetBlock("snow");
-            }
-            else if (blockY == h)
-            {
-                spawned.SetBlock("snow");
-
-            }
-        }
-        if (blockY >= h)
-        {
-            chunk.Expose();
-        }
-
-
-        if (perlin - blockY > 3)
-        {
-            int oreType = Random.Range(0, 1000);
-            if (oreType<20)
-            {
-                spawned.SetBlock("metal");
-            }
-            else if (oreType<25)
-            {
-                spawned.SetBlock("gold");
-            }
-            else
-            {
-                spawned.SetBlock("stone");
-            }
-
-            if (Mathf.Abs(blockY - ((perlin - ground) / caveShift) - caveLevel) < cavePerlin - caveThreshold)
-            {
-                spawned.gameObject.SetActive(false);
-            }
-
-        }
-        else if (perlin - blockY > 0)
-        {
-            spawned.SetBlock("snow");
-        }
-    }
-    private void MountainWorldGen(Block spawned, int blockY, int h, float perlin, float cavePerlin)
-
-    {
-        if (blockY > h)
-        {
-            if (blockY <= waterLevel)
-            {
-                spawned.SetBlock("water4");
-            }
-            else
-            {
-                spawned.gameObject.SetActive(false);
-            }
-
-        }
-        else
-        {
-            if (h <= waterLevel + 1 && blockY > h - 2)
-            {
-                spawned.SetBlock("sand");
-            }
-            else if (blockY >= snowPeak)
-            {
-                spawned.SetBlock("snow");
-            }
-            else if (blockY == h)
-            {
-                spawned.SetBlock("grass");
-
-            }
-        }
-        if (blockY >= h)
-        {
-            chunk.Expose();
-        }
-
-
-        if (perlin - blockY > 3)
-        {
-            int oreType = Random.Range(0, 1000);
-            Debug.Log(oreType);
-            if (oreType < 20)
-            {
-                spawned.SetBlock("metal");
-            }
-            else if (oreType < 25)
-            {
-                spawned.SetBlock("gold");
-            }
-            else
-            {
-                spawned.SetBlock("stone");
-            }
-
-            if (Mathf.Abs(blockY - ((perlin - ground) / (1.3f * caveShift)) - caveLevel) < cavePerlin - caveThreshold)
-            {
-                spawned.gameObject.SetActive(false);
-            }
-
-        }
-    }
-    private void JungleWorldGen(Block spawned, int blockY, int h, float perlin, float cavePerlin)
-
-    {
-        if (blockY > h)
-        {
-            if (blockY <= waterLevel)
-            {
-                spawned.SetBlock("water4");
-            }
-            else
-            {
-                spawned.gameObject.SetActive(false);
-            }
-
-        }
-        else
-        {
-            if (h <= waterLevel + 1 && blockY > h - 2)
-            {
-                spawned.SetBlock("sand");
-            }
-            else if (blockY >= snowPeak)
-            {
-                spawned.SetBlock("snow");
-            }
-            else if (blockY == h)
-            {
-                spawned.SetBlock("mushroom grass");
-
-            }
-        }
-        if (blockY >= h)
-        {
-            chunk.Expose();
-        }
-
-
-        if (perlin - blockY > 3)
-        {
-            int oreType = Random.Range(0, 1000);
-            if (oreType<20)
-            {
-                spawned.SetBlock("metal");
-            }
-            else if (oreType<25)
-            {
-                spawned.SetBlock("gold");
-            }
-            else
-            {
-                spawned.SetBlock("stone");
-            }
-
-            if (Mathf.Abs(blockY - ((perlin - ground) / (1.3f * caveShift)) - caveLevel) < cavePerlin - caveThreshold)
-            {
-                spawned.gameObject.SetActive(false);
-            }
-
-        }
-    }
-    private void TitanGen(Block spawned, int blockY, int h, float perlin, float cavePerlin)
-
-    {
-        if (blockY > h)
-        {
-            if (blockY <= waterLevel)
-            {
-                spawned.SetBlock("water4");
-            }
-            else
-            {
-                spawned.gameObject.SetActive(false);
-            }
-
-        }
-
-        if (blockY >= h)
-        {
-            chunk.Expose();
-        }
-
-
-        if (perlin - blockY > 3)
-        {
-            int oreType = Random.Range(0, 1000);
-            if (oreType<20)
-            {
-                spawned.SetBlock("metal");
-            }
-            else if (oreType<25)
-            {
-                spawned.SetBlock("gold");
-            }
-            else
-            {
-                spawned.SetBlock("stone");
-            }
-
-            if (Mathf.Abs(blockY - ((perlin - ground) / (1.3f * caveShift)) - caveLevel) < cavePerlin - caveThreshold)
-            {
-                spawned.gameObject.SetActive(false);
-            }
-
-        }
-        else if (perlin - blockY >= 0)
-        {
-            spawned.SetBlock("stone");
-        }
-    }
-
-    private void DesertWorldGen(Block spawned, int blockY, int h, float perlin, float cavePerlin)
-    {
-        if (blockY > h)
-        {
-            spawned.gameObject.SetActive(false);
-        }
-        else
-        {
-            spawned.SetBlock("sand");
-        }
-        if (blockY >= h)
-        {
-            chunk.Expose();
-        }
-
-
-        if (perlin - blockY > 5)
-        {
-            int oreType = Random.Range(0, 1000);
-            if (oreType<20)
-            {
-                spawned.SetBlock("metal");
-            }
-            else if (oreType<25)
-            {
-                spawned.SetBlock("gold");
-            }
-            else
-            {
-                spawned.SetBlock("stone");
-            }
-        }
-        if (Mathf.Abs(blockY - ((perlin - ground) / caveShift) - caveLevel) < cavePerlin - caveThreshold)
-        {
-            spawned.gameObject.SetActive(false);
-        }
-    }
-
-
-
+    
 
 
     public static float GetPerlinValue(float x, float y)
     {
-
+/*
         if (Overlord.type == Overlord.WorldType.Countryside)
         {
             return RegularGen(x, y);
@@ -563,6 +239,11 @@ public class ChunkBlocks : MonoBehaviour
         else if (Overlord.type == Overlord.WorldType.Space)
         {
             return SpaceGen(x, y);
+        }
+        */
+        if(Overlord.type == Overlord.WorldType.Elsinore)
+        {
+            return ground +20;
         }
         else
         {
