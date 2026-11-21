@@ -139,6 +139,8 @@ public class Spawner : MonoBehaviour
         }
         TreeSpawner.world = this;
         TreeSpawner.Do();
+        CastleSpawner.world = this;
+        CastleSpawner.Do();
         foreach(Chunk chunky in world)
         {
             chunky.ApplyChanges();
