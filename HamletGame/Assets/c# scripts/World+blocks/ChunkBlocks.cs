@@ -153,7 +153,14 @@ public class ChunkBlocks : MonoBehaviour
             }
             else if (blockY == h)
             {
-                spawned.SetBlock("grass");
+                if(spawned.transform.position.x>25)
+                {
+                    spawned.SetBlock("dirt");
+                }
+                else
+                {
+                    spawned.SetBlock("grass");
+                }
 
             }
         }
