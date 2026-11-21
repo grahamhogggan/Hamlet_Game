@@ -9,7 +9,7 @@ public class CutsceneLoader : MonoBehaviour
     {
         if(playSplashes)
         {
-            SceneManager.LoadScene(15);
+            SceneManager.LoadScene(8);
             playSplashes = false;
         }
         else if(PersistentData.SceneToPlay ==1 )
