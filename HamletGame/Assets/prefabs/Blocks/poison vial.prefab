@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3713191609114991956}
   - component: {fileID: -1330376665685778228}
   m_Layer: 0
-  m_Name: wires
+  m_Name: poison vial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8e4047ec81cf52541a559deba63882c2, type: 2}
+      objectReference: {fileID: 2100000, guid: c05c209b81682e24bab9ce943f301517, type: 2}
     - target: {fileID: -804731622281664130, guid: 1947e0cd5b93731499446b63a7a8bbd5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -171,7 +171,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0650bfa9b51f6c444b9a4ae27bb6bb69, type: 2}
+      objectReference: {fileID: 2100000, guid: c05c209b81682e24bab9ce943f301517, type: 2}
     - target: {fileID: 919132149155446097, guid: 1947e0cd5b93731499446b63a7a8bbd5,
         type: 3}
       propertyPath: m_Name

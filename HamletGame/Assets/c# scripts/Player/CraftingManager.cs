@@ -217,7 +217,7 @@ public class CraftingManager : MonoBehaviour
         AddRecipe("blue shroom,metal,shroom", "wires/1", "basics,machines", 4);
         //AddRecipe("gold,metal,wires,wires", "processor/1", "machines"); // Removing processors and other electrical parts
         AddRecipe("leaves,leaves,leaves,leaves,leaves", "dirt/1", "other");
-
+        AddRecipe("poison vial,sword","poison sword/1","tools");
        //AddRecipe("beam,metal,processor,wires,wires", "extracter/1", "machines");// Removing processors and other electrical parts
        // AddRecipe("beam,metal,processor,torch,wires", "energy pump/1", "machines");// Removing processors and other electrical parts
        // AddRecipe("beam,fan,processor,truss,wires", "turbine/1", "machines");// Removing processors and other electrical parts

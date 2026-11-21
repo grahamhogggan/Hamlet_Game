@@ -1,6 +1,8 @@
 1. Add Elsinore Castle to Elsinore level
 2. Replace enemy models with hamlet-themed enemies
 3. Add more  hamlet-themed blocks
+- Poison sword/rapier needs image and better model
+- poison vial needs image and an actual model
 4. Replace meteors with skulls
 5. Replace final boss robot with Claudius
 6. Replace cutscenes with hamlet themed cutscenes. 

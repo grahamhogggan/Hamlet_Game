@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0650bfa9b51f6c444b9a4ae27bb6bb69, type: 2}
+  - {fileID: 2100000, guid: f53a4c586bb68f345a9eeac26af90238, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4860,8 +4860,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7a888b0e0b29b440af955e88f7def00, type: 2}
-  - {fileID: 2100000, guid: bc66f577495463f428393e5a49386f2c, type: 2}
+  - {fileID: 2100000, guid: c05c209b81682e24bab9ce943f301517, type: 2}
+  - {fileID: 2100000, guid: c05c209b81682e24bab9ce943f301517, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4928,7 +4928,7 @@ GameObject:
   - component: {fileID: 322863628210717642}
   - component: {fileID: -6844756857526635127}
   m_Layer: 0
-  m_Name: electric sword
+  m_Name: poison sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4969,8 +4969,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2, y: 1, z: 0.35376203}
-  m_Center: {x: 0, y: 0, z: 0.0011107028}
+  m_Size: {x: 0.2, y: 1, z: 0.28362054}
+  m_Center: {x: 0, y: 0, z: -0.0071348473}
 --- !u!114 &5746765370173362467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5074,7 +5074,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0650bfa9b51f6c444b9a4ae27bb6bb69, type: 2}
+  - {fileID: 2100000, guid: f53a4c586bb68f345a9eeac26af90238, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5161,7 +5161,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000029802322, y: -0.000000029802322, z: 0.7071068, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -0.2537314}
-  m_LocalScale: {x: 2, y: 26.964098, z: 7.211917}
+  m_LocalScale: {x: 2, y: 26.964098, z: 3.0166006}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4870771861269406390}
@@ -5194,7 +5194,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7a888b0e0b29b440af955e88f7def00, type: 2}
+  - {fileID: 2100000, guid: c05c209b81682e24bab9ce943f301517, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5244,7 +5244,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000043711395, y: 0.00000017881393, z: 1, w: 0.000000075497894}
   m_LocalPosition: {x: 0, y: 0, z: -0.33048514}
-  m_LocalScale: {x: -3.2559624, y: -6.5644593, z: -8.515347}
+  m_LocalScale: {x: -2.0184689, y: -4.0695057, z: -5.278919}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4870771861269406390}
@@ -5327,7 +5327,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.2537314}
-  m_LocalScale: {x: 2, y: 26.9641, z: 7.211917}
+  m_LocalScale: {x: 2, y: 26.9641, z: 3.1919944}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4870771861269406390}
@@ -5360,7 +5360,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7a888b0e0b29b440af955e88f7def00, type: 2}
+  - {fileID: 2100000, guid: c05c209b81682e24bab9ce943f301517, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
