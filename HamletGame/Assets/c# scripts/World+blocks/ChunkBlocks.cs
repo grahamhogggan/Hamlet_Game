@@ -166,11 +166,15 @@ public class ChunkBlocks : MonoBehaviour
         if (perlin - blockY > 3)
         {
             int oreType = Random.Range(0, 1000);
-            if (oreType<20)
+            if(oreType<30)
+            {
+                spawned.SetBlock("coal");
+            }
+            else if (oreType<60)
             {
                 spawned.SetBlock("metal");
             }
-            else if (oreType<25)
+            else if (oreType<65)
             {
                 spawned.SetBlock("gold");
             }

@@ -214,6 +214,7 @@ public class CraftingManager : MonoBehaviour
         AddRecipe("beam,beam,beam,beam", "truss/1", "construction");
         AddRecipe("beam,metal,stick", "sword/1", "tools,basics");
         //AddRecipe("metal,stick,wires", "torch/2", "basics,tools"); // Need to make new torch recipe
+        AddRecipe("coal,stick", "torch/2", "basics,tools");
         AddRecipe("blue shroom,metal,shroom", "wires/1", "basics,machines", 4);
         //AddRecipe("gold,metal,wires,wires", "processor/1", "machines"); // Removing processors and other electrical parts
         AddRecipe("leaves,leaves,leaves,leaves,leaves", "dirt/1", "other");

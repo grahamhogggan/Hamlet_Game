@@ -3,6 +3,7 @@
 3. Add more  hamlet-themed blocks
 - Poison sword/rapier needs image and better model
 - poison vial needs image and an actual model
+-coal needs a new image
 4. Replace meteors with skulls
 5. Replace final boss robot with Claudius
 6. Replace cutscenes with hamlet themed cutscenes. 
