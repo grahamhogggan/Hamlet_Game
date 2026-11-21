@@ -33,7 +33,7 @@ public class Tutorial : MonoBehaviour
         }
         if (PersistentData.tutorialStep == 1)
         {
-            writer.SetTarget("Have a moment to take in your surroundings");
+            writer.SetTarget("Welcome to Denmark, have a moment to take in your surroundings");
             PersistentData.tutorialStep = 2;
         }
         else if (PersistentData.tutorialStep == 2)
@@ -45,7 +45,7 @@ public class Tutorial : MonoBehaviour
         }
         else if (PersistentData.tutorialStep == 3)
         {
-            writer.SetTarget("The first thing you'll need to do down here is gather resources. Go collect 5 pieces of wood");
+            writer.SetTarget("Before heading inside the castle, you need to gather resources. Go collect 5 pieces of wood");
             PersistentData.tutorialStep = 4;
         }
         else if (PersistentData.tutorialStep == 4)
@@ -90,14 +90,14 @@ public class Tutorial : MonoBehaviour
         }
         else if (PersistentData.tutorialStep == 9)
         {
-            writer.SetTarget("Using this pickaxe, you can collect more valuable materials found only underground. Collect 5 metal");
+            writer.SetTarget("Using this pickaxe, you can collect more valuable materials found only underground. Collect 3 coal");
             PersistentData.tutorialStep = 10;
         }
         else if (PersistentData.tutorialStep == 10)
         {
-            nextGoalText.text = "Collect 5 metal";
-            int numCrafted = PlayerInventory.Quantity("metal");
-            if (numCrafted >= 5)
+            nextGoalText.text = "Collect 3 coal";
+            int numCrafted = PlayerInventory.Quantity("coal");
+            if (numCrafted >= 3)
             {
                 nextGoalText.text = "";
                 PersistentData.tutorialStep = 11;
@@ -105,14 +105,29 @@ public class Tutorial : MonoBehaviour
         }
         else if (PersistentData.tutorialStep == 11)
         {
-            writer.SetTarget("Use the metal to craft a beam, and then a sword. You'll need this to effectively fight off enemies");
-            PersistentData.tutorialStep = 12;
+            writer.SetTarget("Use the coal and a stick to craft a torch. Torches heal you as you stand next to them");
+            PersistentData.tutorialStep = 67;
+        }
+        else if (PersistentData.tutorialStep == 67)
+        {
+            nextGoalText.text = "Craft a torch";
+            int numCrafted = PlayerInventory.Quantity("torch");
+            if (numCrafted >= 1)
+            {
+                nextGoalText.text = "";
+                PersistentData.tutorialStep = 12;
+            }
         }
         else if (PersistentData.tutorialStep == 12)
         {
-            nextGoalText.text = "Craft a sword";
-            int numCrafted = PlayerInventory.Quantity("sword");
-            if (numCrafted >= 1)
+            writer.SetTarget("Metal can be used to make tools");
+            PersistentData.tutorialStep = 13;
+        }
+        else if (PersistentData.tutorialStep == 13)
+        {
+            nextGoalText.text = "Collect 5 metal";
+            int numCrafted = PlayerInventory.Quantity("metal");
+            if (numCrafted >= 5)
             {
                 nextGoalText.text = "";
                 PersistentData.tutorialStep = 14;
@@ -120,110 +135,37 @@ public class Tutorial : MonoBehaviour
         }
         else if (PersistentData.tutorialStep == 14)
         {
-            writer.SetTarget("The next important material you'll want is wires. These can usually only be collected from defeated enemies.");
-            PersistentData.tutorialStep = 15;
+            nextGoalText.text = "Craft a sword by crafting 3 metal into a beam, then combining with a stick";
+            int numCrafted = PlayerInventory.Quantity("sword");
+            if (numCrafted >= 1)
+            {
+                nextGoalText.text = "";
+                PersistentData.tutorialStep = 15;
+            }
         }
         else if (PersistentData.tutorialStep == 15)
         {
-            nextGoalText.text = "Collect 3 wires";
-            int numCrafted = PlayerInventory.Quantity("wires");
-            if (numCrafted >= 3)
+            if (writer.TimeSinceFinished() >= 4)
             {
-                nextGoalText.text = "";
                 PersistentData.tutorialStep = 16;
             }
         }
         else if (PersistentData.tutorialStep == 16)
         {
-            writer.SetTarget("To heal form your battles, you need light and warmth. Craft a torch to heal you");
+            writer.SetTarget("You may have noticed the energy you've been gathering by mining and fighting. This can be used to unlock upgrades in your inventory");
             PersistentData.tutorialStep = 17;
         }
         else if (PersistentData.tutorialStep == 17)
         {
-            nextGoalText.text = "Craft torches";
-            int numCrafted = PlayerInventory.Quantity("torch");
-            if (numCrafted >= 1)
+            if (writer.TimeSinceFinished() >= 10)
             {
-                nextGoalText.text = "";
                 PersistentData.tutorialStep = 18;
             }
         }
         else if (PersistentData.tutorialStep == 18)
         {
-            writer.SetTarget("Place the torch to heal you.");
+            writer.SetTarget("Good luck on your journey. Be prepared for a fight on Night 5");
             PersistentData.tutorialStep = 19;
-        }
-        else if (PersistentData.tutorialStep == 19)
-        {
-            if (writer.TimeSinceFinished() >= 4)
-            {
-                PersistentData.tutorialStep = 20;
-            }
-        }
-        else if (PersistentData.tutorialStep == 20)
-        {
-            writer.SetTarget("You can create machines to do work for you. These all require processors");
-            PersistentData.tutorialStep = 21;
-        }
-        else if (PersistentData.tutorialStep == 21)
-        {
-            nextGoalText.text = "Craft a processor";
-
-            int numCrafted = PlayerInventory.Quantity("processor");
-            if (numCrafted >= 1)
-            {
-                nextGoalText.text = "";
-                PersistentData.tutorialStep = 22;
-            }
-        }
-        else if (PersistentData.tutorialStep == 22)
-        {
-            writer.SetTarget("Craft an extractor. These will automatically gather resources for you.");
-            PersistentData.tutorialStep = 23;
-        }
-        else if (PersistentData.tutorialStep == 23)
-        {
-            nextGoalText.text = "Craft an extractor";
-
-            int numCrafted = PlayerInventory.Quantity("extracter");
-            if (numCrafted >= 1)
-            {
-                nextGoalText.text = "";
-                PersistentData.tutorialStep = 24;
-            }
-        }
-        else if (PersistentData.tutorialStep == 24)
-        {
-            writer.SetTarget("You may have noticed the energy you've been gathering. This can be used to unlock upgrades in your inventory");
-            PersistentData.tutorialStep = 25;
-        }
-        else if (PersistentData.tutorialStep == 25)
-        {
-            if (writer.TimeSinceFinished() >= 10)
-            {
-                PersistentData.tutorialStep = 26;
-            }
-        }
-        else if (PersistentData.tutorialStep == 26)
-        {
-            writer.SetTarget("Craft an energy pump. These will automatically gather energy for you.");
-            PersistentData.tutorialStep = 27;
-        }
-        else if (PersistentData.tutorialStep == 27)
-        {
-            nextGoalText.text = "Craft an energy pump";
-
-            int numCrafted = PlayerInventory.Quantity("energy pump");
-            if (numCrafted >= 1)
-            {
-                nextGoalText.text = "";
-                PersistentData.tutorialStep = 28;
-            }
-        }
-        else if (PersistentData.tutorialStep == 28)
-        {
-            writer.SetTarget("Good luck on your journey. If you make it past night five, we'll give you an even bigger challenge");
-            PersistentData.tutorialStep = 29;
         }
     }
 }
