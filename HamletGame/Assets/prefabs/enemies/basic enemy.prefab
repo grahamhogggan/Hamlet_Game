@@ -766,7 +766,8 @@ MonoBehaviour:
   renderer: {fileID: 0}
   allDrops: 0
   drops:
-  - beam
+  - metal
+  - coal
   - beam
   DamageColor: {r: 1, g: 0, b: 0, a: 1}
   boss: 0

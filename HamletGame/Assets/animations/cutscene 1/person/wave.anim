@@ -1038,7 +1038,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 49.583332
+    m_StopTime: 48.616665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -4199,6 +4199,13 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0.4
+    functionName: LoadLoadingSceneAndReset
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 2.3833334
     functionName: SetTarget
     data: So, you've arrived. Welcome, new recruit.
@@ -4239,13 +4246,6 @@ AnimationClip:
     functionName: SetTarget
     data: Your first mission will be an easy one, with many resources for you to
       use. good luck!
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 49.583332
-    functionName: LoadLoadingSceneAndReset
-    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

@@ -851,10 +851,9 @@ MonoBehaviour:
   renderer: {fileID: 0}
   allDrops: 0
   drops:
-  - metal
-  - beam
   - gold
   - poison vial
+  - beam
   DamageColor: {r: 1, g: 0, b: 0, a: 1}
   boss: 0
   body: {fileID: 0}
