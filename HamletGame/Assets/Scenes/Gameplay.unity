@@ -69335,15 +69335,8 @@ MonoBehaviour:
   bosses:
     enemies:
     - {fileID: 5313271226300185539, guid: 3102aee036a98594f8e20a8c411cf6e6, type: 3}
-    - {fileID: 6113549114222433770, guid: ae58aee8ac473ae45a8d55b5b1dae9ad, type: 3}
-    - {fileID: 416341988663598152, guid: 230f83817034c354a8028780d3f906c5, type: 3}
-    - {fileID: 416341988663598152, guid: eb6b96d5bc438cc47b72abc5f356ef7f, type: 3}
-    - {fileID: 416341988663598152, guid: 9ee20201c79bc8042ab51818f6db41ef, type: 3}
-    - {fileID: 7949785740573415645, guid: 5670eca04a6fdaa4f9f91f837b0d6814, type: 3}
-    - {fileID: 5313271226300185539, guid: fca0014236f8f8d4489f598f8f31e242, type: 3}
-    - {fileID: 6113549114222433770, guid: 558da873323ec454eb6cf042a81fc92b, type: 3}
     - {fileID: 416341988663598152, guid: 7dfb79e903d86bb40a99c659aeefefcb, type: 3}
-  spawnRate: 5
+  spawnRate: 10
 --- !u!1 &1676099840
 GameObject:
   m_ObjectHideFlags: 0
@@ -72206,8 +72199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d64f1b6b42d7be45b9a1e50ce7f36c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsPerDay: 300
-  secondsPerNight: 60
+  secondsPerDay: 60
+  secondsPerNight: 20
   minSecondsPerDay: 30
   sun: {fileID: 410087040}
   dropPrefab: {fileID: 7862753109487569369, guid: fb7cb3912b621224999f2ede2ba17089,
