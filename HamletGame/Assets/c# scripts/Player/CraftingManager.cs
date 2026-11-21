@@ -201,9 +201,6 @@ public class CraftingManager : MonoBehaviour
         craftingRecipes = new Dictionary<string, string>();
         recipeBooks = new Dictionary<string, Dictionary<string, string>>();
         AddRecipe("wood", "planks/2", "basics");
-        AddRecipe("palm wood", "planks/1", "basics");
-        AddRecipe("shroom stalk,shroom stalk", "planks/1", "basics", 4);
-        AddRecipe("shroom stalk,shroom stalk", "planks/1", "basics", 5);
         AddRecipe("planks", "stick/3", "basics,construction");
         AddRecipe("pebble,pebble,pebble,pebble,pebble", "stone/1", "basics");
         AddRecipe("stone,stone", "stone slab/2", "construction");
@@ -216,22 +213,22 @@ public class CraftingManager : MonoBehaviour
         AddRecipe("metal,metal,metal", "beam/2", "basics,tools,machines");
         AddRecipe("beam,beam,beam,beam", "truss/1", "construction");
         AddRecipe("beam,metal,stick", "sword/1", "tools,basics");
-        AddRecipe("metal,stick,wires", "torch/2", "basics,tools");
+        //AddRecipe("metal,stick,wires", "torch/2", "basics,tools"); // Need to make new torch recipe
         AddRecipe("blue shroom,metal,shroom", "wires/1", "basics,machines", 4);
-        AddRecipe("gold,metal,wires,wires", "processor/1", "machines");
+        //AddRecipe("gold,metal,wires,wires", "processor/1", "machines"); // Removing processors and other electrical parts
         AddRecipe("leaves,leaves,leaves,leaves,leaves", "dirt/1", "other");
 
-        AddRecipe("beam,metal,processor,wires,wires", "extracter/1", "machines");
-        AddRecipe("beam,metal,processor,torch,wires", "energy pump/1", "machines");
-        AddRecipe("beam,fan,processor,truss,wires", "turbine/1", "machines");
-        AddRecipe("beam,leaves,processor,truss,wires", "biofuel plant/1", "machines");
-        AddRecipe("beam,processor,qubit,truss,wires", "reactor/1", "machines");
-        AddRecipe("battery,beam,gold,metal,wires", "electric sword/1", "tools");
-        AddRecipe("battery,beam,gold,gold,gold", "gold pick/1", "tools");
-        AddRecipe("extracter,gold,torch,truss,wires", "extractor v2/1", "machines");
-        AddRecipe("extracter,qubit,qubit,truss,wires", "quantum extractor/1", "machines");
-        AddRecipe("metal,torch,wires", "grenade/5", "tools,machines");
-        AddRecipe("torch,torch,torch,torch", "campfire/1","machines,tools");
+       //AddRecipe("beam,metal,processor,wires,wires", "extracter/1", "machines");// Removing processors and other electrical parts
+       // AddRecipe("beam,metal,processor,torch,wires", "energy pump/1", "machines");// Removing processors and other electrical parts
+       // AddRecipe("beam,fan,processor,truss,wires", "turbine/1", "machines");// Removing processors and other electrical parts
+       // AddRecipe("beam,leaves,processor,truss,wires", "biofuel plant/1", "machines");// Removing processors and other electrical parts
+        //AddRecipe("beam,processor,qubit,truss,wires", "reactor/1", "machines");// Removing processors and other electrical parts
+        //AddRecipe("battery,beam,gold,metal,wires", "electric sword/1", "tools");// Removing processors and other electrical parts
+        //AddRecipe("battery,beam,gold,gold,gold", "gold pick/1", "tools");// Removing processors and other electrical parts
+        //AddRecipe("extracter,gold,torch,truss,wires", "extractor v2/1", "machines");// Removing processors and other electrical parts
+        //AddRecipe("extracter,qubit,qubit,truss,wires", "quantum extractor/1", "machines");// Removing processors and other electrical parts
+        //AddRecipe("metal,torch,wires", "grenade/5", "tools,machines");// Removing processors and other electrical parts
+       AddRecipe("torch,torch,torch,torch", "campfire/1","machines,tools");
     }
     private void AddRecipe(string costs, string results, string categories = "default",int levelType = -1)
     {

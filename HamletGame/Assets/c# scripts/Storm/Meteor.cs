@@ -39,7 +39,7 @@ public class Meteor : MonoBehaviour
         Block hitBlock = hitObj.GetComponentInParent<Block>();
         if(hitBlock!=null)
         {
-            TerroristManager.Bomb(hitBlock,Mathf.Min(3+(int)Overlord.difficulty/3,6));
+            ExplosionManager.Bomb(hitBlock,Mathf.Min(3+(int)Overlord.difficulty/3,6));
             Instantiate(soundEffectOnImpact,transform.position,Quaternion.identity);
 
         }

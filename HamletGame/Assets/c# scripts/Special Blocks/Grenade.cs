@@ -10,7 +10,7 @@ public class Grenade : MonoBehaviour
     void Start()
     {
         Block b = transform.parent.GetComponent<Block>();
-        TerroristManager.Bomb(b,5);
+        ExplosionManager.Bomb(b,5);
         for(int i = 0; i<20; i++)
         {
             Instantiate(shrapnel,transform.position, Quaternion.Euler(Random.Range(0,360),Random.Range(0,360),Random.Range(0,360)));

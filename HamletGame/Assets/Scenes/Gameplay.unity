@@ -3009,7 +3009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thingies:
   - {fileID: 2868715814572939514, guid: e58816a5537c7f949a0dbb4f8aad0aa3, type: 3}
-  rate: 5
+  rate: 20
   worldScale: 50
 --- !u!1 &373024213
 GameObject:
