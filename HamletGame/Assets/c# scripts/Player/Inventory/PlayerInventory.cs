@@ -27,7 +27,7 @@ public class PlayerInventory : MonoBehaviour
             inventory = new Inventory();
             if(Overlord.type == Overlord.WorldType.Finale)
             {
-                AddItem("electric sword");
+                AddItem("poison sword");
                 for(int i = 0; i<50; i++)
                 {
                     AddItem("grenade");
