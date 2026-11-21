@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Brokencraft.sln"
+    "dotnet.defaultSolution": "HamletGame.sln"
 }
