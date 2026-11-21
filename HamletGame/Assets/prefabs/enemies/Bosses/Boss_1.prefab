@@ -1579,15 +1579,10 @@ MonoBehaviour:
   - truss
   - truss
   - truss
-  - qubit
-  - qubit
-  - battery
-  - processor
   - gold
   - gold
-  - extracter
-  - extracter
-  - extracter
+  - gold
+  - gold
   DamageColor: {r: 1, g: 0, b: 0, a: 1}
   boss: 0
   floatDist: 3

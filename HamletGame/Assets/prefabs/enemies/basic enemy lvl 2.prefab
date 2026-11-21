@@ -853,8 +853,7 @@ MonoBehaviour:
   drops:
   - metal
   - beam
-  - processor
-  - qubit
+  - gold
   DamageColor: {r: 1, g: 0, b: 0, a: 1}
   boss: 0
   body: {fileID: 0}
