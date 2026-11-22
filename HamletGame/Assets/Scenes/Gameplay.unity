@@ -69583,7 +69583,7 @@ MonoBehaviour:
   - enemies: []
   bosses:
     enemies:
-    - {fileID: 5313271226300185539, guid: 3102aee036a98594f8e20a8c411cf6e6, type: 3}
+    - {fileID: 416341988663598152, guid: eb6b96d5bc438cc47b72abc5f356ef7f, type: 3}
     - {fileID: 416341988663598152, guid: 7dfb79e903d86bb40a99c659aeefefcb, type: 3}
   spawnRate: 10
 --- !u!1 &1676099840
