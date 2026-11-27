@@ -69579,6 +69579,7 @@ MonoBehaviour:
   sets:
   - enemies:
     - {fileID: 7949785740573415645, guid: 893acfe3065ca964ba0afc56121a5b47, type: 3}
+    - {fileID: 221501362939491790, guid: 9b99abfb5b078c74ebc9fcdec890b92b, type: 3}
     - {fileID: 7949785740573415645, guid: 195adc891318f6f4bbd862767d75b9a8, type: 3}
   - enemies: []
   bosses:
