@@ -6,9 +6,6 @@
 - poison vial needs image
 - coal needs a new image
 4. Replace meteors with skulls flying down?
-5. Replace final boss robot with Claudius
-- Claudius final
-- import Claudius
 6. Replace cutscenes with hamlet themed cutscenes. 
 - one at start, one after beating main level, or just delete them
 7. Decide what to do with old energy mechanic?
